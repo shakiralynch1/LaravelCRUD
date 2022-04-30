@@ -39,6 +39,10 @@
             name="description"
             placeholder="Description..."
             class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">{{ $post->description }}</textarea> 
+        <textarea 
+            name="sign_off_message"
+            placeholder="Sign Off"
+            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
 
         <button    
             type="submit"
