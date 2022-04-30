@@ -96,7 +96,8 @@
             </a>
 
         </div>
-    </div>    
+    </div> 
+       @break;
 @endforeach
     </div>
 
