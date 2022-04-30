@@ -45,6 +45,7 @@ class PostsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'sign_off_message' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg|max:5048'
         ]);
 
@@ -55,6 +56,7 @@ class PostsController extends Controller
         Post::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
+            'sign_off_message' => $request->input('sign_off_message'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'image_path' => $newImageName,
             'user_id' => auth()->user()->id
@@ -100,12 +102,14 @@ class PostsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'sign_off_message' => 'required',
         ]);
 
         Post::where('slug', $slug)
             ->update([
                 'title' => $request->input('title'),
                 'description' => $request->input('description'),
+                'sign_off_message' => $request->input('sign_off_message'),
                 'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
                 'user_id' => auth()->user()->id
             ]);
