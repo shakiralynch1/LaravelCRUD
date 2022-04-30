@@ -10,12 +10,11 @@
                 <a 
                     href="/blog"
                     class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    Read More
+                    Read More!!!
                 </a>
             </div>
         </div>
     </div>
-
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
@@ -23,15 +22,24 @@
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-3xl font-extrabold text-gray-600">
+                Struggling to be a better Back-end developer?
+            </h2>
+            
+            <p class="py-8 text-gray-500 text-s">
+                Here in this blog, you will learn much more! Learning from the experience of others can be so beneficial. 
+
+            <p class="font-extrabold text-gray-600 text-s pb-9">
+                We have all things to do with html, css, JS react and many more! Learning web frameworks can be very difficult so being able to comment on others posts to help peoples queries and their code
+            </p>
+            <h2 class="text-3xl font-extrabold text-gray-600">
                 Struggling to be a better web developer?
             </h2>
             
             <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
-            </p>
+                Here in this blog, you will learn much more! Learning from the experience of others can be so beneficial. 
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
+                We have all things to do with html, css, JS react and many more! Learning web frameworks can be very difficult so being able to comment on others posts to help peoples queries and their code
             </p>
 
             <a 
