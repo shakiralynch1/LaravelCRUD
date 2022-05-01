@@ -3,8 +3,8 @@
 @section('content')
 <div class="w-4/5 m-auto text-left">
     <div class="py-15">
-        <h1 class="text-6xl">
-            Update Post
+        <h1 class="text-5xl">
+            Update {{ $post->title }}
         </h1>
     </div>
 </div>
@@ -33,7 +33,7 @@
             type="text"
             name="title"
             value="{{ $post->title }}"
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+            class="bg-transparent block border-b-2 w-full h-20 text-4xl outline-none">
 
         <textarea 
             name="description"

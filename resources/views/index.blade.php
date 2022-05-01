@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-gray-100 pt-10">
+    <div class="w-full h-full" style ="background-image: url('https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg');">
+        <div class="flex text-black-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
+                <h1 class="sm:text-black text-5xl uppercase font-bold text-shadow-md pb-14">
                     Are you starting to learn how to code?
                 </h1>
                 <a 
@@ -21,18 +21,24 @@
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
         </div>
 
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
+        <div class="m-auto rounded-md sm:m-auto text-left w-4/5 block">
+            <h2 class="text-3xl font-extrabold text-black-600">
                 Struggling to be a better web developer?
             </h2>
             
-            <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+            <p class="py-5 text-black text-s">
+                @foreach ($posts as $post)
+                @if ($post -> slug == "web-development")
+                <h2 class="text-gray-700 font-bold text-5xl pb-4">
+                    {{ $post->title }}
+                </h2>
+                <p class="font-extrabold text-gray-600 text-s pb-9">
+                    {{ $post->description }}
+                </p>
+                @endif
+                @endforeach
             </p>
-
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
+            
 
             <a 
                 href="/blog"
@@ -44,7 +50,7 @@
 
     <div class="text-center p-15 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
+            Be an expert in...
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
@@ -124,3 +130,4 @@
         </div>
     </div>
 @endsection
+ 
