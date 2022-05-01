@@ -33,6 +33,11 @@
             name="title"
             placeholder="Title"
             class="center bg-transparent block border-b-2 w-2/2 h-20 text-4xl outline-none">
+        <input 
+            type="text"
+            name="subtitle"
+            placeholder="Subtitle"
+            class="center bg-transparent block border-b-2 w-2/2 h-20 text-4xl outline-none">
 
         <textarea 
             name="description"

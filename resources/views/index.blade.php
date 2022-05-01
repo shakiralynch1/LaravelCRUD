@@ -30,6 +30,9 @@
                 <h2 class="text-gray-700 font-bold text-5xl pb-4">
                     {{ $post->title }}
                 </h2>
+                <span class="text-gray-500">
+                    <span class="font-bold italic text-gray-800">{{ $post->subtitle }}</span>
+                </span>
                 <p class="font-extrabold text-gray-600 text-s pb-9">
                     {{ $post->description }}
                 </p>

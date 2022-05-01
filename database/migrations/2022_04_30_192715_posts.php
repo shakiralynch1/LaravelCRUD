@@ -18,6 +18,7 @@ class Posts extends Migration
             $table->increments('id');
             $table->string('slug');
             $table->string('title');
+            $table->string('subtitle');
             $table->string('sign_off_message');
             $table->longText('description');
             $table->string('image_path');
