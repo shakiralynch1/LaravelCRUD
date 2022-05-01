@@ -74,16 +74,7 @@
                                 {{ __('Register') }}
                             </a>
                         </p>
-                        <div class="form-group row mb-0 mt-3">
-                            <div class="col-md-8 offset-md-4">
-                                
-                                <button><a href="{{ url('/login/github') }}"id="github-button" class="btn btn-block btn-social btn-github"><i class="fa fa-github"></i> 
-                                    {{ __('Login with Github') }}
-                                </a>
-                                </button>
-                            </div>
-                        </div>
-                        @endif
+@endif
                     </div>
                 </form>
 

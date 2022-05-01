@@ -11,7 +11,7 @@ class Post extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['title', 'slug', 'description', 'image_path', 'user_id'];
+    protected $fillable = ['title','subtitle', 'slug', 'description','sign_off_message', 'image_path', 'user_id'];
 
     public function user()
     {
@@ -25,5 +25,10 @@ class Post extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
     }
 }

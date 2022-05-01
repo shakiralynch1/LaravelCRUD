@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <footer class="bg-black py-20 mt-20">
+=======
+<footer class="bg-black py-10 mt-20">
+>>>>>>> 3815ee1a7b45fd8921cfa4c7cbdfb4c73b0e1e04
     <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
         <div>
             <h3 class="text-l sm:font-bold text-gray-100">
@@ -88,6 +92,6 @@
         </div>
     </div>
     <p class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
-        Copyright 2017-2021 Code With Dary. All Rights Reserved
+        Copyright 2022 Code With Luke and Shakira. All Rights Reserved
     </p>
 </footer>

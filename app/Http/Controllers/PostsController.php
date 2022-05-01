@@ -44,7 +44,9 @@ class PostsController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'subtitle' => 'required',
             'description' => 'required',
+            'sign_off_message' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg|max:5048'
         ]);
 
@@ -54,7 +56,9 @@ class PostsController extends Controller
 
         Post::create([
             'title' => $request->input('title'),
+            'subtitle' => $request->input('subtitle'),
             'description' => $request->input('description'),
+            'sign_off_message' => $request->input('sign_off_message'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'image_path' => $newImageName,
             'user_id' => auth()->user()->id
@@ -74,6 +78,14 @@ class PostsController extends Controller
     {
         return view('blog.show')
             ->with('post', Post::where('slug', $slug)->first());
+    }
+    public function find()
+    {
+        $post = Post::where('slug', $slug);
+        $post->delete();
+
+        return redirect('/blog')
+            ->with('message', 'Your post has been deleted!');
     }
 
     /**
@@ -100,13 +112,17 @@ class PostsController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'subtitle' => 'required',
             'description' => 'required',
+            'sign_off_message' => 'required',
         ]);
 
         Post::where('slug', $slug)
             ->update([
                 'title' => $request->input('title'),
                 'description' => $request->input('description'),
+                'subtitle' => $request->input('subtitle'),
+                'sign_off_message' => $request->input('sign_off_message'),
                 'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
                 'user_id' => auth()->user()->id
             ]);
@@ -129,5 +145,6 @@ class PostsController extends Controller
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
     }
+
 }
 
