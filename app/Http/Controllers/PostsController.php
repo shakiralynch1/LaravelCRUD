@@ -79,6 +79,7 @@ class PostsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * 
      * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
