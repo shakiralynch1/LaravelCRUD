@@ -16,12 +16,10 @@
         </div>
     </div>
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
-        </div>
+    <div class="flex items-center sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+        
 
-        <div class="m-auto rounded-md sm:m-auto text-left w-4/5 block">
+        <div class="m-auto rounded-md sm:m-auto text-center w-4/5 ">
             <h2 class="text-3xl font-extrabold text-black-600">
                 Struggling to be a better web developer?
             </h2>

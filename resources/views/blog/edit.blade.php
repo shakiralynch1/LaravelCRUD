@@ -21,8 +21,8 @@
     </div>
 @endif
 
-<div class="w-4/5 m-auto pt-20">
-    <form 
+<div class="2xl:container mx-auto lg:max-w-lg ">
+    <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8"
         action="/blog/{{ $post->slug }}"
         method="POST"
         enctype="multipart/form-data">
@@ -33,16 +33,16 @@
             type="text"
             name="title"
             value="{{ $post->title }}"
-            class="bg-transparent block border-b-2 w-full h-20 text-4xl outline-none">
+            class=" bg-transparent block border-b-2 w-2/2 h-20 text-4xl outline-none">
 
         <textarea 
             name="description"
-            placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">{{ $post->description }}</textarea> 
+            placeholder="Description"
+            class=" py-20 bg-transparent block border-b-2 w-full h-40 text-2xl outline-none">{{ $post->description }}</textarea> 
         <textarea 
             name="sign_off_message"
             placeholder="Sign Off"
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+            class=" py-10 bg-transparent block border-b-2 w-3/4 h-25 text-xl outline-none"></textarea>
 
         <button    
             type="submit"
