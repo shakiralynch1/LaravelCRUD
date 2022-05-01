@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
-
+use App\Http\Controllers\GithubController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +22,9 @@ Route::resource('/blog', PostsController::class);
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('login/{provider}', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
+Route::get('{provider}/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
+
+
 

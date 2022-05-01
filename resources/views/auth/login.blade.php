@@ -13,6 +13,7 @@
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">
                     @csrf
 
+            
                     <div class="flex flex-wrap">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
                             {{ __('E-Mail Address') }}:
@@ -73,6 +74,15 @@
                                 {{ __('Register') }}
                             </a>
                         </p>
+                        <div class="form-group row mb-0 mt-3">
+                            <div class="col-md-8 offset-md-4">
+                                
+                                <button><a href="{{ url('/login/github') }}"id="github-button" class="btn btn-block btn-social btn-github"><i class="fa fa-github"></i> 
+                                    {{ __('Login with Github') }}
+                                </a>
+                                </button>
+                            </div>
+                        </div>
                         @endif
                     </div>
                 </form>
