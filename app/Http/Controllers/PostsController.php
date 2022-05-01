@@ -79,6 +79,14 @@ class PostsController extends Controller
         return view('blog.show')
             ->with('post', Post::where('slug', $slug)->first());
     }
+    public function find()
+    {
+        $post = Post::where('slug', $slug);
+        $post->delete();
+
+        return redirect('/blog')
+            ->with('message', 'Your post has been deleted!');
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -136,5 +144,6 @@ class PostsController extends Controller
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
     }
+
 }
 
