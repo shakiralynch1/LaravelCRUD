@@ -144,7 +144,7 @@
                 <span class="uppercase text-xs">
                     PHP
                 </span>
-
+<p>
                 <h3 class="text-xl font-bold py-10">
                     PHP is an easy language to grasp, and it's a great start before you dive into more complex web languages like HTML,CSS, SQL, and JavaScript. If you're learning WordPress too, keep an eye on what people are using with it
                 </h3>
