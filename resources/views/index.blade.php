@@ -38,15 +38,16 @@
                 <p class="font-extrabold text-gray-600 text-s pb-9">
                     {{ $post->description }}
                 </p>
+                <a 
+                    href="/blog/{{ $post->slug }}"
+                    class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                    Find Out More
+                </a>
                 @endif
                 @endforeach
             </p>
         
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
-            </a>
+            
         </div>
     
     <div class="m-auto rounded-md sm:m-auto text-center w-4/5 ">
@@ -66,15 +67,16 @@
             <p class="font-extrabold text-gray-600 text-s pb-9">
                 {{ $post->description }}
             </p>
+            <a 
+            href="/blog/{{ $post->slug }}"
+            class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+            Find Out More
+            </a>
             @endif
             @endforeach
         </p>
     
-        <a 
-            href="/blog"
-            class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-            Find Out More
-        </a>
+        
     </div>
     </div>
 </div>
@@ -150,7 +152,7 @@
                 </h3>
 
                 <a 
-                    href=""
+                    href="/blog"
                     class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
                     Find Out More
                 </a>
@@ -169,7 +171,7 @@
                     </h3>
     
                     <a 
-                        href=""
+                        href="/blog"
                         class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
                         Find Out More
                     </a>
