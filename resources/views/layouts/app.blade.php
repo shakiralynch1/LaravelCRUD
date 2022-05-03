@@ -46,6 +46,9 @@
                     <a href="{{ url('/blog') }}" class="text-lg font-semibold text-gray-100 no-underline">
                         Blog
                     </a>
+                    <a href="{{ url('/feedback') }}" class="text-lg font-semibold text-gray-100 no-underline">
+                        FeedBack
+                    </a>
                 </nav>
             </div>
         </header>

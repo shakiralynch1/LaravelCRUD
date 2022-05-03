@@ -75,13 +75,8 @@
             class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
             Find Out More
         </a>
-<<<<<<< HEAD
     </div>
     </div>
-=======
-    </div>
-    </div>
->>>>>>> 4ba2ad3e85806a825ddce692e565b3488dcb8359
 </div>
 
     <div class="text-center p-15 bg-black text-white">
@@ -186,5 +181,5 @@
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
         </div>
     </div>
-@endsection
+
  

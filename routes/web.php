@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,7 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('login/{provider}', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
-Route::get('{provider}/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
+Route::get('/feedback', [\App\Http\Controllers\ContactController::class, 'index'])->name('feedback');
 
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 
@@ -41,8 +40,16 @@ Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPa
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+Route::get('contact-us', 'ContactController@getContact');
+Route::post('contact-us', 'ContactController@saveContact');
+
+Route::get('index', [ContactController::class, 'index']);
+Route::get('contact-us', [Controller::class, 'contact-us']);
+
+Auth::routes();
 
 
+Auth::routes();
 
 
 
